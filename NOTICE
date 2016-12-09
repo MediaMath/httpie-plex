@@ -1,0 +1,8 @@
+httpie-plex-auth
+Copyright 2016 MediaMath
+
+This product automatically installs the folling packages (license type and link in parentheses):
+
+- requests (Apache 2.0, https://github.com/kennethreitz/requests/blob/master/LICENSE)
+- requests-oauthlib (ISC, https://github.com/requests/requests-oauthlib/blob/master/LICENSE)
+- oauthlib (BSD, https://github.com/idan/oauthlib/blob/master/LICENSE)
