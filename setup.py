@@ -5,8 +5,6 @@ except ImportError:
     pass
 import os
 
-from httpie_plex_auth import __version__
-
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 def fread(fname):
@@ -17,7 +15,7 @@ setup(
     name='httpie-plex-auth',
     description='Auth plugin for HTTPie for MediaMath\'s Bid Opportunity Firehose.',
     long_description=fread('README.rst'),
-    version=__version__,
+    version='0.1.0',
     author='Prasanna Swaminathan',
     author_email='prasanna@mediamath.com',
     license=fread('LICENSE'),

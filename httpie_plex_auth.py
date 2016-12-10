@@ -14,8 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# TODO remove logging
-import logging
 from os.path import join
 from time import time
 try:
@@ -28,9 +26,6 @@ from httpie.config import DEFAULT_CONFIG_DIR, BaseConfigDict
 from httpie.plugins import AuthPlugin
 from oauthlib.oauth2 import BackendApplicationClient
 from requests_oauthlib import OAuth2, OAuth2Session
-
-# TODO remove logging
-logging.basicConfig(level=logging.DEBUG)
 
 __version__ = '0.1.0'
 __author__ = 'Prasanna Swaminathan'
@@ -57,8 +52,6 @@ class PlexToken(BaseConfigDict):
 		super(PlexToken, self).load()
 		self.pop('key', None)
 	def update_token(self, token):
-		# TODO remove logging
-		logging.debug('updating token')
 		self.update(token)
 		self.save()
 	def is_expired(self):
@@ -71,15 +64,11 @@ class PlexAuth(OAuth2):
 		self.client_id = client_id
 		super(PlexAuth, self).__init__(client_id, client, token)
 	def __call__(self, r):
-		# TODO remove logging
-		logging.debug(r.url)
 		url_parts = list(urlparse.urlparse(r.url))
 		query = dict(urlparse.parse_qsl(url_parts[4]))
 		query['api_key'] = self.client_id
 		url_parts[4] = urlencode(query)
 		r.url = urlparse.urlunparse(url_parts)
-		# TODO remove logging
-		logging.debug(r.url)
 		return super(PlexAuth, self).__call__(r)
 
 class PlexAuthPlugin(AuthPlugin):
@@ -92,8 +81,6 @@ class PlexAuthPlugin(AuthPlugin):
 		token = PlexToken()
 		token.load()
 		if token.is_expired():
-			# TODO remove logging
-			logging.debug('need a new token')
 			tok = get_new_token(username, password, TOKEN_URL, token)
 			token.update_token(tok)
 		return PlexAuth(username, client, token)
