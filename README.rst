@@ -1,5 +1,5 @@
 ======================
-httpie-plex-auth
+httpie-plex
 ======================
 
 Bid Opportuinty Firehose OAuth2 Plugin for
@@ -8,11 +8,9 @@ Bid Opportuinty Firehose OAuth2 Plugin for
 Installation
 ------------
 
-Clone this repo, then:
-
 .. code-block:: bash
 
-    $ python setup.py install
+    $ pip install httpie-plex
 
 You should now see ``plex`` under ``--auth-type`` in ``$ http --help`` output.
 
@@ -37,3 +35,9 @@ Usage
     $ http --auth-type=plex \
         --auth='client_id:client_secret' \
         https://apibase.com/consumers
+
+Token Storage
+-------------
+
+To cache the OAuth2 token, this package uses a folder ``plex`` inside the `HTTPie config directory <https://httpie.org/doc#config>`_.
+This defaults to, on \*NIX machines, ``~/.httpie/plex``. You can set a different base directory by setting the ``HTTPIE_CONFIG_DIR`` environment variable.

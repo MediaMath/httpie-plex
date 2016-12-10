@@ -12,20 +12,20 @@ def fread(fname):
         return f.read()
 
 setup(
-    name='httpie-plex-auth',
+    name='httpie-plex',
     description='Auth plugin for HTTPie for MediaMath\'s Bid Opportunity Firehose.',
     long_description=fread('README.rst'),
     version='0.1.0',
     author='Prasanna Swaminathan',
     author_email='prasanna@mediamath.com',
     license=fread('LICENSE'),
-    url='https://github.com/pswaminathan/httpie-plex-auth',
-    download_url='https://github.com/pswaminathan/httpie-plex-auth',
-    py_modules=['httpie_plex_auth'],
+    url='https://github.com/MediaMath/httpie-plex',
+    download_url='https://github.com/MediaMath/httpie-plex',
+    py_modules=['httpie_plex'],
     zip_safe=False,
     entry_points={
         'httpie.plugins.auth.v1': [
-            'httpie_plex_auth = httpie_plex_auth:PlexAuthPlugin'
+            'httpie_plex = httpie_plex:PlexAuthPlugin'
         ]
     },
     install_requires=[

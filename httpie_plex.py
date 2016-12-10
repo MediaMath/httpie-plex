@@ -40,7 +40,7 @@ def get_new_token(client_id, client_secret, token_url, token):
 
 class PlexToken(BaseConfigDict):
 	name = 'plex'
-	helpurl = 'https://github.com/pswaminathan/httpie-plex-auth#token'
+	helpurl = 'https://github.com/MediaMath/httpie-plex#token-storage'
 	about = 'Plex access token cache'
 
 	def __init__(self):
