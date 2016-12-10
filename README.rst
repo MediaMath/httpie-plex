@@ -40,4 +40,4 @@ Token Storage
 -------------
 
 To cache the OAuth2 token, this package uses a folder ``plex`` inside the `HTTPie config directory <https://httpie.org/doc#config>`_.
-This defaults to, on \*NIX machines, ``~/.httpie/plex``. You can set a different base directory by setting the ``HTTPIE_CONFIG_DIR`` environment variable.
+This defaults to, on \*nix machines, ``~/.httpie/plex``. You can set a different base directory by setting the ``HTTPIE_CONFIG_DIR`` environment variable.
