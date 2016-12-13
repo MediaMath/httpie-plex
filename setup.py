@@ -31,7 +31,7 @@ setup(
         ]
     },
     install_requires=[
-        'httpie>=0.7.0',
+        'httpie>=0.9.2',
         'requests-oauthlib>=0.3.2',
     ],
     classifiers=[

@@ -17,13 +17,17 @@ You should now see ``plex`` under ``--auth-type`` in ``$ http --help`` output.
 Homebrew
 ~~~~~~~~
 
-If you've installed HTTPie using Homebrew, there are some other hoops to jump through.
-You'll first need to figure out which version of HTTPie you have installed.
+If you've installed HTTPie using Homebrew, but it's pointing to your system Python,
+there may be other hoops to jump through. Note that this doesn't apply if you've
+also installed Python via Homebrew: essentially, if ``pip list`` lists ``httpie``,
+you're good to go with the method above. Otherwise, you'll need to manually install it
+into the proper directory. First, clone the repository.
+You'll then need to figure out which version of HTTPie you have installed.
 Then do something like:
 
 .. code-block:: bash
 
-    $ PYTHONPATH="/usr/local/Cellar/httpie/0.9.8/libexec/lib/python2.7/site-packages:/usr/local/Cellar/httpie/0.9.3/libexec/vendor/lib/python2.7/site-packages" \
+    $ PYTHONPATH="/usr/local/Cellar/httpie/0.9.8/libexec/lib/python2.7/site-packages:/usr/local/Cellar/httpie/0.9.8/libexec/vendor/lib/python2.7/site-packages" \
         python setup.py install \
             --prefix=/usr/local/Cellar/httpie/0.9.8/libexec/vendor
 
