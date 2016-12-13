@@ -7,13 +7,15 @@ import os
 
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 
+
 def fread(fname):
     with open(os.path.join(CURRENT_DIR, fname)) as f:
         return f.read()
 
 setup(
     name='httpie-plex',
-    description='Auth plugin for HTTPie for MediaMath\'s Bid Opportunity Firehose.',
+    description='Auth plugin for HTTPie for MediaMath\'s Bid Opportunity '
+                'Firehose.',
     long_description=fread('README.rst'),
     version='0.1.0',
     author='Prasanna Swaminathan',
