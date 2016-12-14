@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Auth plugin for HTTPie for MediaMath's Bid Opportunity Firehose"""
 
 # Copyright 2016 MediaMath
@@ -28,7 +29,7 @@ from oauthlib.oauth2 import BackendApplicationClient
 from requests_oauthlib import OAuth2, OAuth2Session
 
 __version__ = '0.1.0'
-__author__ = 'Prasanna Swaminathan'
+__author__ = 'pswaminathan'
 __license__ = 'Apache Software License v2.0'
 
 TOKEN_URL = 'https://api.mediamath.com/oauth2/v1.0/token'
@@ -54,9 +55,11 @@ class PlexToken(BaseConfigDict):
     helpurl = 'https://github.com/MediaMath/httpie-plex#token-storage'
     about = 'Plex access token cache'
 
-    def __init__(self):
+    def __init__(self, name=None):
         super(PlexToken, self).__init__()
-        self.directory = join(DEFAULT_CONFIG_DIR, 'plex')
+        if name is not None:
+            self.name = name
+        self.directory = join(DEFAULT_CONFIG_DIR, self.name)
 
     def _get_path(self):
         return join(self.directory, 'token.json')
@@ -88,7 +91,7 @@ class PlexAuth(OAuth2):
 class PlexAuthPlugin(AuthPlugin):
     name = 'Plex v1.0 auth'
     auth_type = 'plex'
-    description = 'OAuth2 client credentials grant'
+    description = 'OAuth2 client credentials grant for Bid Opp Firehose'
 
     def get_auth(self, username, password):
         client = BackendApplicationClient(username)

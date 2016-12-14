@@ -12,6 +12,7 @@ def fread(fname):
     with open(os.path.join(CURRENT_DIR, fname)) as f:
         return f.read()
 
+
 setup(
     name='httpie-plex',
     description='Auth plugin for HTTPie for MediaMath\'s Bid Opportunity '
@@ -34,8 +35,9 @@ setup(
         'httpie>=0.9.2',
         'requests-oauthlib>=0.3.2',
     ],
+    test_suite="test_httpie_plex",
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Programming Language :: Python',
         'Intended Audience :: Developers',
         'Environment :: Plugins',
