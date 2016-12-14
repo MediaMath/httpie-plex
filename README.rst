@@ -56,5 +56,5 @@ Tests are run with
 	$ python setup.py test
 
 Contributions are welcome! For new features, tests are a requirement and should
-have good coverage. For bug fixes/improvements, tests must pass. Further, style-
-check your code with `pycodestyle <https://github.com/PyCQA/pycodestyle>`_.
+have good coverage. For bug fixes/improvements, tests must pass. Further, code
+must be style-checked with `pycodestyle <https://github.com/PyCQA/pycodestyle>`_.
