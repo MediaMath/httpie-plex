@@ -18,7 +18,7 @@ setup(
     description='Auth plugin for HTTPie for MediaMath\'s Bid Opportunity '
                 'Firehose.',
     long_description=fread('README.rst'),
-    version='0.1.0',
+    version='1.0.0',
     author='Prasanna Swaminathan',
     author_email='prasanna@mediamath.com',
     license=fread('LICENSE'),
