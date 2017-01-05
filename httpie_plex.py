@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Auth plugin for HTTPie for MediaMath's Bid Opportunity Firehose"""
+"""Auth plugin for HTTPie for MediaMath's Plex"""
 
 # Copyright 2016 MediaMath
 
@@ -91,7 +91,7 @@ class PlexAuth(OAuth2):
 class PlexAuthPlugin(AuthPlugin):
     name = 'Plex v1.0 auth'
     auth_type = 'plex'
-    description = 'OAuth2 client credentials grant for Bid Opp Firehose'
+    description = 'OAuth2 client credentials grant for Plex'
 
     def get_auth(self, username, password):
         client = BackendApplicationClient(username)

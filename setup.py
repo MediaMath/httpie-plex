@@ -15,8 +15,7 @@ def fread(fname):
 
 setup(
     name='httpie-plex',
-    description='Auth plugin for HTTPie for MediaMath\'s Bid Opportunity '
-                'Firehose.',
+    description='Auth plugin for HTTPie for MediaMath\'s Plex.',
     long_description=fread('README.rst'),
     version='1.0.0',
     author='Prasanna Swaminathan',

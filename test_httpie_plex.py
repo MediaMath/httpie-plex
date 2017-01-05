@@ -127,7 +127,7 @@ class PlexAuthPluginTestCase(TestCase):
         self.assertIsInstance(plex_plugin, AuthPlugin)
 
     def test_attribute(self):
-        desc = 'OAuth2 client credentials grant for Bid Opp Firehose'
+        desc = 'OAuth2 client credentials grant for Plex'
         self.assertEqual(PlexAuthPlugin.name, 'Plex v1.0 auth')
         self.assertEqual(PlexAuthPlugin.auth_type, 'plex')
         self.assertEqual(PlexAuthPlugin.description, desc)

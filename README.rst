@@ -2,8 +2,7 @@
 httpie-plex
 ======================
 
-Bid Opportuinty Firehose OAuth2 Plugin for
-`HTTPie <https://github.com/jkbr/httpie>`_.
+Plex OAuth2 Plugin for `HTTPie <https://github.com/jkbr/httpie>`_.
 
 Installation
 ------------
