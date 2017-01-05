@@ -17,7 +17,7 @@ setup(
     name='httpie-plex',
     description='Auth plugin for HTTPie for MediaMath\'s Plex.',
     long_description=fread('README.rst'),
-    version='1.0.0',
+    version='1.0.1',
     author='Prasanna Swaminathan',
     author_email='prasanna@mediamath.com',
     license=fread('LICENSE'),

@@ -28,7 +28,7 @@ from httpie.plugins import AuthPlugin
 from oauthlib.oauth2 import BackendApplicationClient
 from requests_oauthlib import OAuth2, OAuth2Session
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __author__ = 'pswaminathan'
 __license__ = 'Apache Software License v2.0'
 
